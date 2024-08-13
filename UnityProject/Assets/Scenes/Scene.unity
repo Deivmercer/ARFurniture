@@ -513,6 +513,27 @@ Transform:
   - {fileID: 410087041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &813905376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2317402190937796274, guid: 398ee1c84048d68479a4ca31600e05d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1810375414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &813905381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813905376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c4d484df1dc45898d62d9adc3f3575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arRaycastManager: {fileID: 1125729855}
+  arPlaneManager: {fileID: 1125729854}
+  prefab: {fileID: 8317569577189595544, guid: a8c550c2f53ab4843a33389bf7cbc1e9, type: 3}
 --- !u!1 &1123243683 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5861492708049305318, guid: 398ee1c84048d68479a4ca31600e05d2,
@@ -542,6 +563,8 @@ GameObject:
   - component: {fileID: 1125729852}
   - component: {fileID: 1125729851}
   - component: {fileID: 1125729853}
+  - component: {fileID: 1125729854}
+  - component: {fileID: 1125729855}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -599,6 +622,34 @@ MonoBehaviour:
   m_MaxNumberOfMovingImages: 0
   m_TrackedImagePrefab: {fileID: 8317569577189595544, guid: a8c550c2f53ab4843a33389bf7cbc1e9,
     type: 3}
+--- !u!114 &1125729854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125729850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 706060347548870095, guid: 939a1ebd27a7549f683954312d7ea339,
+    type: 3}
+  m_DetectionMode: -1
+--- !u!114 &1125729855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125729850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RaycastPrefab: {fileID: 0}
 --- !u!1 &1138162071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4425253279636393919, guid: 398ee1c84048d68479a4ca31600e05d2,
@@ -791,6 +842,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2204464523640232130, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317402190937796274, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_Name
+      value: TogglePlaneManagerButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -838,6 +899,41 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 813905381}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePlaneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TapManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4425253279636393919, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_Name
@@ -859,6 +955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RotateRightButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838268719009670937, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_text
+      value: Toggle planes
       objectReference: {fileID: 0}
     - target: {fileID: 8430587915101059650, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -972,6 +1073,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1123243688}
+    - targetCorrespondingSourceObject: {fileID: 2317402190937796274, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 813905381}
     - targetCorrespondingSourceObject: {fileID: 4846490202263123579, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       insertIndex: -1
