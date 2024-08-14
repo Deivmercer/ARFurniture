@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -8,7 +9,7 @@ public class TapManager : MonoBehaviour
     public ARRaycastManager arRaycastManager;
     public ARPlaneManager arPlaneManager;
     public Object prefab;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +21,28 @@ public class TapManager : MonoBehaviour
     {
         if (Input.touchCount == 0)
             return;
-        
+
         Touch touch = Input.GetTouch(0);
+
+        // Ignoring touch when the user is holding the finger on the screen
+        if (touch.phase != TouchPhase.Began)
+            return;
+
+        if (!arPlaneManager.isActiveAndEnabled)
+            return;
+
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         bool result = arRaycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon);
 
         if (!result)
             return;
 
-        Instantiate(prefab, hits[0].pose.position, hits[0].pose.rotation);
+        GameObject selectedObject = GameObject.FindWithTag("SelectedObject");
+        if (selectedObject)
+            selectedObject.tag = "Untagged";
+
+        Object newGameObject = Instantiate(prefab, hits[0].pose.position, hits[0].pose.rotation);
+        newGameObject.GameObject().tag = "SelectedObject";
     }
 
     public void TogglePlaneManager()
@@ -36,4 +50,6 @@ public class TapManager : MonoBehaviour
         arPlaneManager.enabled = !arPlaneManager.isActiveAndEnabled;
         arPlaneManager.SetTrackablesActive(arPlaneManager.enabled);
     }
+    
+    // TODO: vuforia ultimo video da circa ~1:10:00
 }

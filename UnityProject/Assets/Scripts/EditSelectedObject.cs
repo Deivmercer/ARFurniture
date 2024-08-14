@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateObject : MonoBehaviour
+public class EditSelectedObject : MonoBehaviour
 {
+    public GameObject buttonCanvas;
     private GameObject _gameObject;
     private Canvas _canvas;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +15,22 @@ public class RotateObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_gameObject)
+        if (_gameObject)
         {
-            _gameObject = GameObject.FindWithTag("RotateObject");
-            if (_gameObject)
-                _canvas = _gameObject.GetComponentInChildren<Canvas>();
+            if (_gameObject.CompareTag("Untagged"))
+            {
+                _gameObject = null;
+                buttonCanvas.SetActive(false);
+            }
+            return;
         }
-        
+
+        _gameObject = GameObject.FindWithTag("SelectedObject");
+        if (!_gameObject)
+            return;
+
+        _canvas = _gameObject.GetComponentInChildren<Canvas>();
+        buttonCanvas.SetActive(true);
     }
 
     public void RotateLeft()
@@ -42,8 +50,4 @@ public class RotateObject : MonoBehaviour
         if (_canvas)
             _canvas.gameObject.SetActive(!_canvas.isActiveAndEnabled);
     }
-    
-    // TODO: spostando il cubo sotto un oggetto vuoto riesco a ruotarlo correttamente,
-    //       però il tracking sembra essere peggiorato (o magari è colpa di risparmio
-    //       energetico?)
 }
