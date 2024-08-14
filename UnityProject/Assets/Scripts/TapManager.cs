@@ -64,6 +64,4 @@ public class TapManager : MonoBehaviour
         arPlaneManager.enabled = !arPlaneManager.isActiveAndEnabled;
         arPlaneManager.SetTrackablesActive(arPlaneManager.enabled);
     }
-    
-    // TODO: vuforia ultimo video da circa ~1:10:00
 }

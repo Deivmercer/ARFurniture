@@ -955,7 +955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 354889833}
-  - component: {fileID: 354889835}
+  - component: {fileID: 354889834}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -978,7 +978,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476766350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &354889835
+--- !u!114 &354889834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1192,6 +1192,20 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1810375414}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &686202392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194435899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7e7af35314e4d50ac0c399bdf571f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCanvas: {fileID: 1556092762}
+  otherCanvas: {fileID: 194435899}
 --- !u!1 &714196497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2048,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354889835}
+      objectReference: {fileID: 354889834}
     - target: {fileID: 384419352168977125, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2043,12 +2057,12 @@ PrefabInstance:
     - target: {fileID: 384419352168977125, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RotateLeft
+      value: ToggleShow
       objectReference: {fileID: 0}
     - target: {fileID: 384419352168977125, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RotateObject, Assembly-CSharp
+      value: ObjectManipulation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 384419352168977125, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -2069,7 +2083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354889835}
+      objectReference: {fileID: 354889834}
     - target: {fileID: 942627301633815611, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2078,12 +2092,12 @@ PrefabInstance:
     - target: {fileID: 942627301633815611, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleShow
+      value: RotateRight
       objectReference: {fileID: 0}
     - target: {fileID: 942627301633815611, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RotateObject, Assembly-CSharp
+      value: ObjectManipulation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 942627301633815611, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -2093,7 +2107,7 @@ PrefabInstance:
     - target: {fileID: 2204464523640232130, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_Name
-      value: ObjectManipulationButtons
+      value: ObjectManipulationCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 2204464523640232130, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -2103,7 +2117,7 @@ PrefabInstance:
     - target: {fileID: 2317402190937796274, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_Name
-      value: TogglePlaneManagerButton
+      value: RotateLeftButton
       objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -2117,9 +2131,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354889835}
+      objectReference: {fileID: 354889834}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2127,30 +2156,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RotateRight
+      value: DeselectObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Hide
       objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RotateObject, Assembly-CSharp
+      value: ObjectManipulation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CanvasController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: CanvasController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3006767667419765642, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3118131162248045488, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_text
-      value: Hide message
+      value: '>'
       objectReference: {fileID: 0}
     - target: {fileID: 3532599376157485563, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_text
-      value: '>
-
-'
+      value: Close
       objectReference: {fileID: 0}
     - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -2164,9 +2221,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 354889834}
     - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2174,12 +2236,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TogglePlaneManager
+      value: RotateLeft
       objectReference: {fileID: 0}
     - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ObjectManipulation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TapManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4138173478073259192, guid: 398ee1c84048d68479a4ca31600e05d2,
@@ -2190,29 +2262,29 @@ PrefabInstance:
     - target: {fileID: 4425253279636393919, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_Name
-      value: RotateLeftButton
+      value: HideMessageButton
       objectReference: {fileID: 0}
     - target: {fileID: 4739789203418775386, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_text
+      value: Toggle message
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846490202263123579, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_Name
+      value: RotateRightButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861492708049305318, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      propertyPath: m_Name
+      value: CloseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838268719009670937, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_text
       value: '<
 
 '
-      objectReference: {fileID: 0}
-    - target: {fileID: 4846490202263123579, guid: 398ee1c84048d68479a4ca31600e05d2,
-        type: 3}
-      propertyPath: m_Name
-      value: ToggleShowButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5861492708049305318, guid: 398ee1c84048d68479a4ca31600e05d2,
-        type: 3}
-      propertyPath: m_Name
-      value: RotateRightButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7838268719009670937, guid: 398ee1c84048d68479a4ca31600e05d2,
-        type: 3}
-      propertyPath: m_text
-      value: Toggle planes
       objectReference: {fileID: 0}
     - target: {fileID: 8430587915101059650, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -2317,7 +2389,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2204464523640232130, guid: 398ee1c84048d68479a4ca31600e05d2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 686202392}
   m_SourcePrefab: {fileID: 100100000, guid: 398ee1c84048d68479a4ca31600e05d2, type: 3}
 --- !u!1 &1975185081
 GameObject:

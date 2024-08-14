@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EditSelectedObject : MonoBehaviour
+public class ObjectManipulation : MonoBehaviour
 {
     public GameObject buttonCanvas;
     private GameObject _gameObject;
@@ -18,11 +18,9 @@ public class EditSelectedObject : MonoBehaviour
         if (_gameObject)
         {
             if (_gameObject.CompareTag("Untagged"))
-            {
-                _gameObject = null;
-                buttonCanvas.SetActive(false);
-            }
-            return;
+                DeselectObject();
+            else
+                return;
         }
 
         _gameObject = GameObject.FindWithTag("SelectedObject");
@@ -49,5 +47,12 @@ public class EditSelectedObject : MonoBehaviour
     {
         if (_canvas)
             _canvas.gameObject.SetActive(!_canvas.isActiveAndEnabled);
+    }
+
+    public void DeselectObject()
+    {
+        _gameObject.tag = "Untagged";
+        _gameObject = null;
+        buttonCanvas.GetComponent<CanvasController>().Hide();
     }
 }
