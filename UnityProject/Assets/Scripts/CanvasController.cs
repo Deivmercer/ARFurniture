@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class InstructionsController : MonoBehaviour
+public class CanvasController : MonoBehaviour
 {
-    public GameObject instructionCanvas;
     public GameObject mainCanvas;
+    public GameObject otherCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +22,12 @@ public class InstructionsController : MonoBehaviour
     public void Show()
     {
         mainCanvas.SetActive(false);
-        instructionCanvas.SetActive(true);
+        otherCanvas.SetActive(true);
     }
 
     public void Hide()
     {
-        Debug.Log("Hiding");
-        instructionCanvas.SetActive(false);
+        otherCanvas.SetActive(false);
         mainCanvas.SetActive(true);
     }
 }

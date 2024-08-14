@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using Object = UnityEngine.Object;
 
 public class TapManager : MonoBehaviour
 {
@@ -41,8 +42,21 @@ public class TapManager : MonoBehaviour
         if (selectedObject)
             selectedObject.tag = "Untagged";
 
+        if (!prefab)
+            return;
+
         Object newGameObject = Instantiate(prefab, hits[0].pose.position, hits[0].pose.rotation);
         newGameObject.GameObject().tag = "SelectedObject";
+    }
+
+    private void OnEnable()
+    {
+        TogglePlaneManager();
+    }
+
+    private void OnDisable()
+    {
+        TogglePlaneManager();
     }
 
     public void TogglePlaneManager()
