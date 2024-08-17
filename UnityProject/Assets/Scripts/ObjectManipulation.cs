@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ObjectManipulation : MonoBehaviour
 {
-    public GameObject buttonCanvas;
+    public GameObject rotationCanvas;
+    public GameObject scaleCanvas;
     private GameObject _gameObject;
-    private Canvas _canvas;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,7 @@ public class ObjectManipulation : MonoBehaviour
         if (!_gameObject)
             return;
 
-        _canvas = _gameObject.GetComponentInChildren<Canvas>();
-        buttonCanvas.SetActive(true);
+        rotationCanvas.SetActive(true);
     }
 
     public void RotateLeft()
@@ -55,16 +54,23 @@ public class ObjectManipulation : MonoBehaviour
             _gameObject.transform.Rotate(-10, 0, 0);
     }
 
-    public void ToggleShow()
+    public void IncreaseScale()
     {
-        if (_canvas)
-            _canvas.gameObject.SetActive(!_canvas.isActiveAndEnabled);
+        if (_gameObject)
+            _gameObject.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+    }
+
+    public void DecreaseScale()
+    {
+        if (_gameObject && _gameObject.transform.localScale.x > 0.1f)
+            _gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
     }
 
     public void DeselectObject()
     {
         _gameObject.tag = "Untagged";
         _gameObject = null;
-        buttonCanvas.GetComponent<CanvasController>().Hide();
+        rotationCanvas.GetComponent<CanvasController>().Hide();
+        scaleCanvas.SetActive(false);
     }
 }
