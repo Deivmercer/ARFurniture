@@ -47,11 +47,11 @@ public class SelectObjectController : MonoBehaviour
             Destroy(_preview);
 
         _preview = Instantiate(prefabList[_currentSelection]);
-        _preview.GameObject().transform.parent = transform;
-
-        Vector3 position = new Vector3(_preview.GameObject().transform.position.x,
-            _preview.GameObject().transform.position.y, 10);
-        _preview.GameObject().transform.position = position;
+        _preview.GameObject().transform.position = new Vector3(0, 0, 0);
+        _preview.GameObject().layer = LayerMask.NameToLayer("Preview");
+        var children = _preview.GetComponentsInChildren<Transform>();
+        foreach (var child in children)
+            child.GameObject().layer = LayerMask.NameToLayer("Preview");
     }
 
     public void OnPlaceButtonPressed()
