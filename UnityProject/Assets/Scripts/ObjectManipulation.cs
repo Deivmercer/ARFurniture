@@ -43,6 +43,18 @@ public class ObjectManipulation : MonoBehaviour
             _gameObject.transform.Rotate(0, 10, 0);
     }
 
+    public void RotateUp()
+    {
+        if (_gameObject)
+            _gameObject.transform.Rotate(10, 0, 0);
+    }
+
+    public void RotateDown()
+    {
+        if (_gameObject)
+            _gameObject.transform.Rotate(-10, 0, 0);
+    }
+
     public void ToggleShow()
     {
         if (_canvas)
