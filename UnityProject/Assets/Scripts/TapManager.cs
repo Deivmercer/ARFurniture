@@ -47,6 +47,8 @@ public class TapManager : MonoBehaviour
 
         Object newGameObject = Instantiate(prefab, hits[0].pose.position, hits[0].pose.rotation);
         newGameObject.GameObject().tag = "SelectedObject";
+        
+        gameObject.SetActive(false);
     }
 
     private void OnEnable()
