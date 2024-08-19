@@ -23,6 +23,7 @@ namespace KTintercativeProp
         {
             activate = false;
             audioSource = GetComponent<AudioSource>();
+            icon.SetActive(false);
         }
 
         // Update is called once per frame
@@ -30,7 +31,7 @@ namespace KTintercativeProp
         {
             if (activate)
             {
-                icon.SetActive(true);
+                // icon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (toggleState)
@@ -49,10 +50,10 @@ namespace KTintercativeProp
                     }
                 }
             }
-            else
-            {
-                icon.SetActive(false);
-            }
+            // else
+            // {
+            //     icon.SetActive(false);
+            // }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -68,6 +69,24 @@ namespace KTintercativeProp
             if (other.CompareTag("Player"))
             {
                 activate = false;
+            }
+        }
+
+        public void Animate()
+        {
+            if (toggleState)
+            {
+                animator.Play("A");
+                audioSource.clip = sound_A;
+                audioSource.Play();
+                toggleState = false;
+            }
+            else
+            {
+                animator.Play("B");
+                audioSource.clip = sound_B;
+                audioSource.Play();
+                toggleState = true;
             }
         }
     }

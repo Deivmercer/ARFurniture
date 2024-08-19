@@ -1,12 +1,15 @@
+using KTintercativeProp;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class TouchObject : MonoBehaviour, IPointerClickHandler
 {
+    private AnimProp animProp;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animProp = GetComponent<AnimProp>();
     }
 
     // Update is called once per frame
@@ -17,13 +20,23 @@ public class TouchObject : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (CompareTag("SelectedObject"))
+            RunAnimation();
+        else
+            SelectObject();
+    }
+
+    private void SelectObject()
+    {
         GameObject currentSelectedObject = GameObject.FindWithTag("SelectedObject");
         if (currentSelectedObject)
             currentSelectedObject.tag = "Untagged";
 
         tag = "SelectedObject";
-        
-        // TODO: al doppio click (o nel caso quando viene toccato nuovamente l'oggetto selezionato) far partire
-        //       l'animazione
+    }
+
+    private void RunAnimation()
+    {
+        animProp.Animate();
     }
 }
