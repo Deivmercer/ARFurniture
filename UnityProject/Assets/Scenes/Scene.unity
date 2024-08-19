@@ -1233,9 +1233,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabList:
-  - {fileID: 8317569577189595544, guid: 84a6e0ada52ad47dbb6578f07730ad32, type: 3}
-  - {fileID: 8317569577189595544, guid: 988756d1ee8a54bf2a1569b67721683a, type: 3}
-  - {fileID: 8317569577189595544, guid: ef526eab825694eae8297ea521d9f55d, type: 3}
+  - {fileID: 4802864530027793923, guid: 15f7394cebc95734c9fe0d615f2f052c, type: 3}
+  - {fileID: 7917649092666834308, guid: d0981c752f81b43488b6f3c170d9ed02, type: 3}
+  - {fileID: 2439573362530303431, guid: e97878c8183c9d84aad836c3c8110ea0, type: 3}
+  prefabscaleList:
+  - 0.5
+  - 1
+  - 3
   tapManager: {fileID: 1985896929}
 --- !u!1 &300088476
 GameObject:
@@ -2476,8 +2480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 0, y: -35}
+  m_SizeDelta: {x: 660, y: 1030}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157164728
 MonoBehaviour:

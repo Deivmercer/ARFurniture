@@ -6,6 +6,7 @@ using UnityEngine;
 public class SelectObjectController : MonoBehaviour
 {
     public List<Object> prefabList;
+    public List<float> prefabscaleList;
     public TapManager tapManager;
     private int _currentSelection;
     private Object _preview;
@@ -48,6 +49,9 @@ public class SelectObjectController : MonoBehaviour
 
         _preview = Instantiate(prefabList[_currentSelection]);
         _preview.GameObject().transform.position = new Vector3(0, 0, 0);
+        _preview.GameObject().transform.localScale = new Vector3(prefabscaleList[_currentSelection],
+            prefabscaleList[_currentSelection],
+            prefabscaleList[_currentSelection]);
         _preview.GameObject().layer = LayerMask.NameToLayer("Preview");
         var children = _preview.GetComponentsInChildren<Transform>();
         foreach (var child in children)
