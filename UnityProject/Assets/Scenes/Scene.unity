@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7e7af35314e4d50ac0c399bdf571f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 290923778}
+  mainCanvas: {fileID: 1031643742}
   otherCanvas: {fileID: 1349521185}
 --- !u!1001 &1349521182
 PrefabInstance:

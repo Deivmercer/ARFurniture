@@ -22,5 +22,8 @@ public class TouchObject : MonoBehaviour, IPointerClickHandler
             currentSelectedObject.tag = "Untagged";
 
         tag = "SelectedObject";
+        
+        // TODO: al doppio click (o nel caso quando viene toccato nuovamente l'oggetto selezionato) far partire
+        //       l'animazione
     }
 }

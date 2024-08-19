@@ -49,6 +49,7 @@ public class TapManager : MonoBehaviour
         newGameObject.GameObject().tag = "SelectedObject";
         
         gameObject.SetActive(false);
+        // TODO: dopo averlo usato una volta, non riesco ad usarlo più
     }
 
     private void OnEnable()
