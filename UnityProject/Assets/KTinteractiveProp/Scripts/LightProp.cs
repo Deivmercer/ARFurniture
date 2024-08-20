@@ -15,6 +15,11 @@ namespace KTintercativeProp
         public Renderer lantern;
         public int uvCN;
 
+        void Start()
+        {
+            icon.SetActive(false);
+        }
+        
         void Update()
         {
             if (activate)
@@ -42,10 +47,10 @@ namespace KTintercativeProp
                     }
                 }
             }
-            else
-            {
-                icon.SetActive(false);
-            }
+            // else
+            // {
+            //     icon.SetActive(false);
+            // }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -61,6 +66,28 @@ namespace KTintercativeProp
             if (other.CompareTag("Player"))
             {
                 activate = false;
+            }
+        }
+
+        public void ToggleLight(bool state)
+        {
+            if (state)
+            {
+                lightObj.SetActive(false);
+                if (lantern != null)
+                {
+                    lantern.materials[uvCN].SetColor("_EmissionColor", Color.black);
+                }
+                toggleState = false;
+            }
+            else
+            {
+                lightObj.SetActive(true);
+                if (lantern != null)
+                {
+                    lantern.materials[uvCN].SetColor("_EmissionColor", Color.white);
+                }
+                toggleState = true;
             }
         }
     }
