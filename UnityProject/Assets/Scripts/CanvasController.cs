@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CanvasController : MonoBehaviour
 {
@@ -22,12 +20,16 @@ public class CanvasController : MonoBehaviour
     public void Show()
     {
         mainCanvas.SetActive(false);
+        mainCanvas.tag = "Untagged";
         otherCanvas.SetActive(true);
+        otherCanvas.tag = "ActiveUI";
     }
 
     public void Hide()
     {
         otherCanvas.SetActive(false);
+        otherCanvas.tag = "Untagged";
         mainCanvas.SetActive(true);
+        mainCanvas.tag = "ActiveUI";
     }
 }

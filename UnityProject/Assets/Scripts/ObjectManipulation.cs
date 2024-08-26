@@ -27,7 +27,7 @@ public class ObjectManipulation : MonoBehaviour
         if (!_gameObject)
             return;
 
-        rotationCanvas.SetActive(true);
+        StartManipulation();
     }
 
     public void RotateLeft()
@@ -64,6 +64,19 @@ public class ObjectManipulation : MonoBehaviour
     {
         if (_gameObject && _gameObject.transform.localScale.x > 0.1f)
             _gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+    }
+
+    private void StartManipulation()
+    {
+
+        GameObject activeUI = GameObject.FindWithTag("ActiveUI");
+        if (activeUI)
+        {
+            activeUI.SetActive(false);
+            activeUI.tag = "Untagged";
+        }
+        rotationCanvas.SetActive(true);
+        rotationCanvas.tag = "ActiveUI";
     }
 
     public void DeselectObject()
