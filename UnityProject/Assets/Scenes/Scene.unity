@@ -1520,7 +1520,7 @@ PrefabInstance:
     - target: {fileID: 4739789203418775386, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
       propertyPath: m_text
-      value: Select object
+      value: Place objects
       objectReference: {fileID: 0}
     - target: {fileID: 4846490202263123579, guid: 398ee1c84048d68479a4ca31600e05d2,
         type: 3}
@@ -3431,8 +3431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7e7af35314e4d50ac0c399bdf571f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 290923778}
-  otherCanvas: {fileID: 1031643742}
+  mainCanvas: {fileID: 1031643742}
+  otherCanvas: {fileID: 1349521185}
 --- !u!1001 &1376825370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4645,67 +4645,27 @@ PrefabInstance:
     - target: {fileID: 730797829146455667, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
       propertyPath: m_text
-      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate
-        vestibulum ante mattis mattis. Aenean consectetur in erat in interdum. Donec
-        tincidunt lobortis luctus. Nunc pharetra, elit nec mattis mollis, quam nibh
-        sagittis ipsum, at sollicitudin metus est vitae risus. Duis non nunc in ante
-        pretium congue quis eu nunc. Maecenas aliquam sem turpis, ut lacinia risus
-        pulvinar sit amet. Nam a pretium nisi. Vivamus imperdiet ligula magna, ac
-        lobortis massa consequat eget. Ut vel dolor ligula. Maecenas rhoncus vel
-        nisi sed tristique. Donec bibendum dui a elit vestibulum lacinia. Curabitur
-        vehicula magna vitae metus scelerisque, sed blandit nibh convallis. Cras
-        aliquet justo in rutrum condimentum. Duis ut neque vehicula, porta neque
-        quis, molestie nisi. Etiam aliquam eu ante ac porta.
-
-
-        Integer nulla
-        dolor, lobortis pharetra nisl et, efficitur dapibus erat. Aenean viverra,
-        risus et suscipit pulvinar, purus ante posuere lectus, ac egestas lorem nunc
-        id ante. Nunc ac leo eu lectus pretium rutrum. Suspendisse sit amet finibus
-        orci. Morbi urna ante, malesuada a imperdiet tincidunt, mollis at purus.
-        Vivamus sed tincidunt lorem. Suspendisse ipsum purus, elementum vel aliquam
-        a, aliquam in erat. Praesent non ligula eu nisl viverra sodales. Morbi ultricies
-        nunc et libero ultrices viverra. Vivamus in euismod massa.
-
-
-        Fusce
-        urna arcu, porttitor nec diam sed, elementum auctor nisl. Suspendisse gravida,
-        est vitae rhoncus auctor, dolor quam eleifend ante, id pulvinar felis sapien
-        a orci. Maecenas gravida tincidunt hendrerit. Morbi purus nisl, vehicula
-        egestas velit nec, sodales lacinia ligula. Praesent lobortis vehicula lorem,
-        sed efficitur quam posuere eget. Suspendisse turpis eros, egestas iaculis
-        lorem sed, finibus sagittis metus. Nam sed lacinia magna. Aliquam nulla risus,
-        ullamcorper et sagittis sed, lacinia id enim. Mauris eget nisi non ex mollis
-        iaculis. Maecenas dapibus cursus orci et gravida. Donec consectetur elementum
-        ipsum id maximus. Vestibulum ante metus, vehicula vel felis quis, molestie
-        pellentesque eros. Praesent consequat auctor orci at lobortis. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-
-
-        Nulla faucibus metus et lacus laoreet
-        laoreet. Mauris eu libero eget ex ultricies tempus at ut ex. Sed scelerisque
-        risus eget leo molestie dignissim. Sed ut neque fringilla metus ornare sodales
-        et eu mauris. Quisque condimentum metus at velit aliquam blandit. Mauris
-        lacus magna, iaculis ut dapibus nec, varius sed metus. Morbi scelerisque
-        est ac dapibus rutrum. Phasellus semper mi ullamcorper ipsum luctus rutrum.
-        Quisque efficitur suscipit erat, ut sagittis felis pharetra a. Fusce at consequat
-        sapien. Mauris dignissim eros justo, a blandit sem venenatis nec. Praesent
-        consectetur ornare bibendum. Pellentesque a sapien lorem. Curabitur elementum
-        purus ut iaculis dignissim. Sed maximus rutrum quam a suscipit.
-
-
-'
+      value: "Place a new object:\n1) Press the \u201CPlace\u201D button\n2) Use
+        the arrows on the bottom of the screen to select an object\n3) Press the
+        \u201CPlace\u201D button\n4) Wait for the application to show blue areas,
+        and press on one of them to place the selected object\n\n\nModify an object:\n1)
+        You can start the object manipulation by placing a new object or, from the
+        main UI, by pressing on an existing object.\n2) Use the buttons on the bottom
+        side of the main manipulation UI to rotate the selected object.\n3) Press
+        the \u201CScale\u201D button to edit the scale of the object.\n4) Press the
+        \u201CClose\u201D button to exit object manipulation.\n\n\nPlace an object
+        using markers:\nYou can also place an object by scanning a marker. The object
+        placed on the marker can be modified like any other object.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 730797829146455667, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 730797829146455667, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 730797829146455667, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
@@ -4880,7 +4840,7 @@ PrefabInstance:
     - target: {fileID: 6079552634919069681, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2300
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 6079552634919069681, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
@@ -4915,7 +4875,7 @@ PrefabInstance:
     - target: {fileID: 6079552634919069681, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1150
+      value: -840
       objectReference: {fileID: 0}
     - target: {fileID: 6079552634919069681, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
@@ -4955,7 +4915,7 @@ PrefabInstance:
     - target: {fileID: 7367446109231702915, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 7367446109231702915, guid: 53248159ae746e049b29d3e1aa32523d,
         type: 3}
