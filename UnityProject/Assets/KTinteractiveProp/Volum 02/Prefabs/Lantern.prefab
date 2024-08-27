@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 7952692131139017838}
   - component: {fileID: 4415486480465666894}
   - component: {fileID: 3254471675757891401}
+  - component: {fileID: 2116501772708175469}
   m_Layer: 0
   m_Name: Lantern
   m_TagString: Untagged
@@ -294,6 +295,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d076ec3228b5a47c6895a7d951973857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2116501772708175469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7952692131139017833}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7952692132269142222
 GameObject:
   m_ObjectHideFlags: 0

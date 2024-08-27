@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 4142974387917103640}
   - component: {fileID: 4142974387917103643}
   - component: {fileID: -5470396191510129189}
+  - component: {fileID: -2046855755022007705}
   m_Layer: 0
   m_Name: ShelfCabinet 03
   m_TagString: Untagged
@@ -374,6 +375,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d076ec3228b5a47c6895a7d951973857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2046855755022007705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142974387917103642}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &4142974387613984945
 PrefabInstance:
   m_ObjectHideFlags: 0

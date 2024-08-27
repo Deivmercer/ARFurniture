@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 1610687455938524541}
   - component: {fileID: 1610687455938524540}
   - component: {fileID: 6457192712261112129}
+  - component: {fileID: -8084549758423505954}
   m_Layer: 0
   m_Name: StorageCabinets 01
   m_TagString: Untagged
@@ -259,6 +260,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d076ec3228b5a47c6895a7d951973857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8084549758423505954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610687455938524419}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1610687457430051683
 GameObject:
   m_ObjectHideFlags: 0

@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 3468359538223391441}
   - component: {fileID: 9172413558837762190}
   - component: {fileID: 2608232862836101243}
+  - component: {fileID: -4949722713151497903}
   m_Layer: 0
   m_Name: Closet 02
   m_TagString: Untagged
@@ -374,6 +375,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d076ec3228b5a47c6895a7d951973857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4949722713151497903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8512895948730849370}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &8260451593691587920
 PrefabInstance:
   m_ObjectHideFlags: 0

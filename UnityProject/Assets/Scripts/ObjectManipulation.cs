@@ -5,6 +5,7 @@ public class ObjectManipulation : MonoBehaviour
     public GameObject rotationCanvas;
     public GameObject scaleCanvas;
     private GameObject _gameObject;
+    private Outline _outline;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +69,6 @@ public class ObjectManipulation : MonoBehaviour
 
     private void StartManipulation()
     {
-
         GameObject activeUI = GameObject.FindWithTag("ActiveUI");
         if (activeUI)
         {
@@ -77,12 +77,17 @@ public class ObjectManipulation : MonoBehaviour
         }
         rotationCanvas.SetActive(true);
         rotationCanvas.tag = "ActiveUI";
+
+        _outline = _gameObject.GetComponent<Outline>();
+        _outline.enabled = true;
     }
 
     public void DeselectObject()
     {
         _gameObject.tag = "Untagged";
         _gameObject = null;
+        _outline.enabled = false;
+        _outline = null;
         rotationCanvas.GetComponent<CanvasController>().Hide();
         scaleCanvas.SetActive(false);
     }
