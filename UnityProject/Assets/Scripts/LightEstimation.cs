@@ -43,6 +43,6 @@ public class LightEstimation : MonoBehaviour
         if (!args.lightEstimation.averageBrightness.HasValue)
             return;
 
-        lightProp.ToggleLight(args.lightEstimation.averageBrightness.Value > 0.4f);
+        lightProp.ToggleLight(args.lightEstimation.averageBrightness.Value > 0.3f);
     }
 }
